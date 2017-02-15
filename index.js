@@ -15,7 +15,7 @@ var ApiMap   = require('lib-loader').lib.ApiMap;
 var DEV_URL  = process.env.DEV_URL;
 var NIX_ENV  = process.env.NIX_ENV;
 var DEV_MODE = NIX_ENV === 'development';
-var PRO_URL  = 'https://api.nutritionix.com';
+var PRO_URL  = 'https://trackapi.nutritionix.com';
 
 
 function Nutritionix(clientOpts) {
@@ -57,7 +57,8 @@ function Nutritionix(clientOpts) {
         'brand_search': new apiMap.ApiRequest('v2.brand_search', 'qs'),
         item:           new apiMap.ApiRequest('v2.item', 'qs'),
         brand:          new apiMap.ApiRequest('v2.brand', 'qs'),
-        natural:        new apiMap.ApiRequest('v2.natural', 'body')
+        natural:        new apiMap.ApiRequest('v2.natural', 'body'),
+        instant:        new apiMap.ApiRequest('v2.instant', 'qs')
     };
 
     return nutritionix;
