@@ -58,7 +58,8 @@ function Nutritionix(clientOpts) {
         item:           new apiMap.ApiRequest('v2.item', 'qs'),
         brand:          new apiMap.ApiRequest('v2.brand', 'qs'),
         natural:        new apiMap.ApiRequest('v2.natural', 'body'),
-        instant:        new apiMap.ApiRequest('v2.instant', 'qs')
+        instant:        new apiMap.ApiRequest('v2.instant', 'qs'),
+        nutrients:      new apiMap.ApiRequest('v2.nutrients', 'body')
     };
 
     return nutritionix;
